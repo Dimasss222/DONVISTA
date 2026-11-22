@@ -1,0 +1,920 @@
+/* =====================================
+   DONVISTA — PREMIUM DESIGN
+   ===================================== */
+
+:root {
+    --navy: #101d2c;
+    --navy-light: #1d3045;
+    --gold: #c69b58;
+    --gold-light: #e6c58e;
+    --white: #ffffff;
+    --ivory: #f6f4ef;
+    --text: #263446;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+.header {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: rgba(13, 25, 39, .96);
+    border-bottom: 1px solid rgba(198, 155, 88, .3);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    color: var(--gold);
+}
+
+.logo-name small {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navigation a {
+    color: #f4f4f4;
+    font-size: 14px;
+    transition: color .3s ease;
+}
+
+.navigation a:hover {
+    color: var(--gold-light);
+}
+
+.header-button {
+    padding: 15px 24px;
+    border: 1px solid var(--gold);
+    border-radius: 40px;
+    color: var(--gold-light);
+    font-size: 13px;
+    transition: .35s ease;
+}
+
+.header-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   HERO — MAIN SCREEN
+   ===================================== */
+
+.hero {
+    min-height: 760px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 10% 70px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9, 19, 31, .94),
+            rgba(9, 19, 31, .65),
+            rgba(9, 19, 31, .10)
+        ),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 760px;
+    color: white;
+    position: relative;
+    z-index: 2;
+
+    animation: heroAppear 1.3s ease both;
+}
+
+.subtitle {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 8vw, 100px);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 4vw, 44px);
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 520px;
+    color: #e0e5eb;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   BUTTONS
+   ===================================== */
+
+.main-button {
+    display: inline-block;
+    padding: 19px 32px;
+
+    color: var(--navy);
+    font-weight: bold;
+
+    background: linear-gradient(
+        135deg,
+        #e6c58e,
+        #b88b4c
+    );
+
+    border-radius: 40px;
+
+    box-shadow: 0 8px 30px rgba(198, 155, 88, .2);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.main-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(198, 155, 88, .35);
+    background: #f0d4a5;
+}/* =====================================
+   SECTIONS
+   ===================================== */
+
+.section {
+    padding: 110px 9%;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 25px;
+}
+
+.section > p:not(.subtitle) {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #718092;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.about {
+    background: var(--ivory);
+}
+
+/* =====================================
+   PRODUCTS
+   ===================================== */
+
+.products {
+    background: #ffffff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: left;
+
+    box-shadow: 0 8px 35px rgba(20, 34, 53, .07);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(20, 34, 53, .15);
+}
+
+.product-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+
+    transition: transform .8s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.07);
+}
+
+.image-one {
+    background-image: url(
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900"
+    );
+}
+
+.image-two {
+    background-image: url(
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900"
+    );
+}
+
+.image-three {
+    background-image: url(
+        "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900"
+    );
+}
+
+.product-card h3 {
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 25px 22px 12px;
+}
+
+.product-card p {
+    color: #788493;
+    line-height: 1.7;
+    margin: 0 22px 20px;
+}
+
+.product-card a {
+    display: inline-block;
+    color: #a67d43;
+    font-weight: bold;
+    margin: 0 22px 28px;
+    transition: color .3s ease;
+}
+
+.product-card a:hover {
+    color: var(--navy);
+}
+
+/* =====================================
+   CONTACTS
+   ===================================== */
+
+.contacts {
+    background:
+        linear-gradient(135deg, #101d2c, #263c54);
+    color: white;
+}
+
+.contacts h2 {
+    color: white;
+}
+
+.contacts > p:not(.subtitle) {
+    color: #d0d8e1;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+.footer {
+    padding: 40px 8%;
+    background: #0b1521;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer p {
+    color: #b5bdc7;
+    font-size: 13px;
+}
+
+/* =====================================
+   ANIMATIONS
+   ===================================== */
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes goldGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(198, 155, 88, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(198, 155, 88, .25);
+    }
+}
+
+/* Появление элементов при прокрутке */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-button:hover {
+    animation: goldGlow 1.5s infinite;
+}
+
+/* =====================================
+   MOBILE VERSION
+   ===================================== */
+
+@media (max-width: 950px) {
+
+    .header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {font-size: 21px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header-button {
+        font-size: 11px;
+        padding: 12px 16px;
+    }
+
+    .navigation {
+        gap: 13px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 720px;
+        padding: 180px 7% 70px;
+        background-position: center;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* Уважение к настройкам пользователя */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ==================================
+   DONVISTA — PREMIUM ADVANTAGES
+================================== */
+
+.dv-advantages,
+.dv-service {
+    padding: 110px 7%;
+    background: #101d2c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.dv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dv-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.dv-overline {
+    color: #d6aa65;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.dv-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.dv-heading h2 span {
+    color: #d6aa65;
+}
+
+.dv-heading p {
+    color: #b5c0cd;
+    line-height: 1.8;
+}
+
+/* ADVANTAGES */
+
+.dv-advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dv-card {
+    padding: 32px 24px;
+    background: #192b40;
+    border: 1px solid rgba(214,170,101,0.2);
+    border-radius: 14px;
+    transition: transform .4s ease,
+                border-color .4s ease,
+                background .4s ease;
+}
+
+.dv-card:hover {
+    transform: translateY(-9px);
+    background: #213750;
+    border-color: #d6aa65;
+}
+
+.dv-icon {
+    font-size: 30px;
+    color: #d6aa65;
+    margin-bottom: 24px;
+}
+
+.dv-number {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #e4bd7c;
+    margin-bottom: 12px;
+}
+
+.dv-card h3,
+.dv-service-card h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.dv-card p,
+.dv-service-card p {
+    color: #b5c0cd;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* SERVICE */
+
+.dv-service {
+    background: #152438;
+}
+
+.dv-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.dv-service-card {
+    padding: 35px;
+    background: #1b3048;
+    border-radius: 14px;
+    border: 1px solid rgba(214,170,101,0.18);
+    transition: all .4s ease;
+}
+
+.dv-service-card:hover {
+    transform: translateY(-7px);
+    border-color: #d6aa65;
+}
+
+.dv-service-icon {
+    display: inline-block;
+    color: #d6aa65;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* MASTER PRICE */
+
+.dv-master {
+    margin-top: 45px;
+    padding: 35px;
+    border: 1px solid #c69b58;
+    border-radius: 16px;
+    background: linear-gradient(
+        120deg,
+        #1c3046,
+        #253a50
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.dv-master h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.dv-master p {
+    color: #b5c0cd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.dv-master-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dv-master-price span,
+.dv-master-price small {
+    color: #d0d7df;
+}
+
+.dv-master-price strong {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #e4bd7c;
+    margin: 5px 0;
+}
+
+/* BUTTON */
+
+.dv-button {
+    display: inline-block;
+    padding: 16px 27px;
+    border-radius: 40px;
+    background: linear-gradient(
+        135deg,
+        #e5bd78,
+        #bd8b43
+    );
+    color: #142235;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all .35s ease;
+}
+
+.dv-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(214,170,101,.25);
+}
+
+/* ANIMATION */
+
+@keyframes dvAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dv-advantages,
+.dv-service {
+    animation: dvAppear .8s ease both;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .dv-advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dv-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .dv-advantages,
+    .dv-service {
+        padding: 70px 20px;
+    }
+
+    .dv-advantages-grid {
+        grid-template-columns: 1fr;
+    }
+22:18
+.dv-master {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dv-master-price {
+        align-items: flex-start;
+    }
+
+    .dv-heading h2 {
+        font-size: 31px;
+    }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .dv-advantages,
+    .dv-service,
+    .dv-card,
+    .dv-service-card,
+    .dv-button {
+        animation: none;
+        transition: none;
+    }
+}.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.contact-buttons .main-button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}<footer class="footer">
+
+    <a href="#home" class="logo">
+        DONVISTA
+    </a>
+
+    <p>© 2026 DONVISTA. Все права защищены.</p>
+
+</footer>/* DONVISTA - КАРТОЧКИ ПРОДУКЦИИ */
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 25px;
+}
+
+.products-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.products-heading span {
+    color: #b18a43;
+    letter-spacing: 5px;
+    font-size: 11px;
+}
+
+.products-heading h2 {
+    font-size: 36px;
+    color: #252525;
+    margin-top: 15px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+.product-card h3 {
+    font-size: 21px;
+    margin-top: 20px;
+    color: #292929;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+.product-card a {
+    color: #a17b3c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .products-heading h2 {
+        font-size: 28px;
+    }
+}/* DONVISTA - МЕТКА ГОРОДА */
+
+.city-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #d9b46b;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    border: 1px solid rgba(217, 180, 107, 0.5);
+    border-radius: 30px;
+    background: rgba(217, 180, 107, 0.08);
+}
+
+.city-dot {
+    width: 8px;
+    height: 8px;
+    background: #d9b46b;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #d9b46b;
+}.hero {
+    background-image:
+        linear-gradient(rgba(5, 15, 35, 0.55), rgba(5, 15, 35, 0.55)),
+        url("https://m.realt.by/typo3temp/pics/ca/12/ca12c23b191af1eae0164c58f871a9d3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
